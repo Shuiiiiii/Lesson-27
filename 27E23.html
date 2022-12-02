@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+      h1,
+      p {
+        text-align: center;
+      }
+      .flex-button-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      input {
+        margin: 0 auto;
+        text-align: center;
+      }
+      #a {
+        border: 0;
+        font-size: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="is-size-3">Counter</h1>
+    <div class="control">
+      <input id="a" class="input" type="text"
+      value="0" / readonly>
+    </div>
+    <div class="flex-button-group">
+      <button id="plusOne" class="button is-outlined" onclick="p()">+1</button>
+      <button id="minusOne" class="button is-outlined" onclick="m()">-1</button>
+      <button class="button is-outlined" onclick="pf()">+5</button>
+      <button class="button is-outlined" onclick="pt()">+10</button>
+      <button class="button is-outlined" onclick="mf()">-5</button>
+      <button class="button is-outlined" onclick="mt()">-10</button>
+      <button class="button is-outlined" onclick="alert(i *= 2); xd.value = i">x2</button>
+      <button class="button is-outlined" onclick="alert(i /=2); xd.value = i">/2</button>
+      <button class="button is-outlined" onclick="alert(i *= 10); xd.value=i">x10</button>
+      <button class="button is-outlined" onclick="alert(i /= 10); xd.value=i">/10</button>
+      <button class="button is-outlined" onclick="setzero()">0</button>
+
+    </div>
+    <script>
+     var xd = document.getElementById('a');
+     var i = 0;
+      function mm() {
+          i *= 2;
+          document.getElementById('a').value = i;
+          alert(i);
+      }
+      function p() {
+        i++;
+        document.getElementById("a").value = i;
+        alert(i);
+      }
+      function m() {
+        i--;
+        document.getElementById("a").value = i;
+        alert(i);
+    }
+      function mf() {
+        i -= 5;
+        document.getElementById("a").value = i;
+        alert(i);
+    }
+      function mt() {
+        //apparently cannot use -5 operator, :( //
+        i -= 10;
+        document.getElementById("a").value = i;
+        alert(i);
+    }
+      function pf() {
+        i += 5;
+        document.getElementById("a").value = i;
+        alert(i);
+    }
+      function pt() {
+        i += 10;
+        document.getElementById("a").value = i;
+        alert(i);
+    }
+    function setzero() {
+        i = 0;
+        document.getElementById('a').value = i;
+        alert(i);
+    }
+    </script>
+  </body>
+</html>

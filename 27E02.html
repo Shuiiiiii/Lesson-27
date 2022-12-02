@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex justify-center">
+        <button type="button" id="c" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Button</button>
+    </div>
+    <p id="a" class="text-center"></p>
+    <p id="b" class="text-center"></p>
+    <script>
+      let y = document.getElementById("c");
+      y.addEventListener("click", function () {
+        document.getElementById("a").innerHTML = "message 1";
+        document.getElementById("b").innerHTML = "message 2";
+      });
+    </script>
+  </body>
+</html>
